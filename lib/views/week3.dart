@@ -73,7 +73,9 @@ class _Week3PageState extends State<Week3Page> {
                     )
                   ],
                 )),
-
+            SizedBox(
+              height: 8,
+            ),
             //Flexible ke-2
             Flexible(
                 flex: 2,
@@ -125,9 +127,12 @@ class _Week3PageState extends State<Week3Page> {
 
             //Flexible ke-3
             Flexible(
-              flex: 4,
+              flex: 7,
               child: Container(
                 child: Column(children: [
+                  SizedBox(
+                    height: 16,
+                  ),
                   Container(
                       height: 50,
                       width: double.infinity,
@@ -147,7 +152,21 @@ class _Week3PageState extends State<Week3Page> {
                           "\n\n     As a 'shared world' RPG, players on the same server co-exist with and can encounter other players in the same instance of the game world. Tower of Fantasy supports co-op play where up to 4 players on the same server can team up to play together to explore the world, complete general or multiplayer-specific missions, or fight world bosses, and PvP where players can challenge each other to duels in open-world combat, or fight in an arena mode called Apex League to advance up a leaderboard to obtain special rewards.",
                       style: TextStyle(fontSize: 18),
                     ),
-                  ))
+                  )),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.all(12)),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Week4Page()));
+                      },
+                      child: Text('Book Now'),
+                    ),
+                  )
                 ]),
               ),
             ),
